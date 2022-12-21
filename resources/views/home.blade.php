@@ -12,25 +12,21 @@
         <div class="container">
             <nav>
                 <ul>
+                    @foreach ($homeCountries as $country)
                     <li>
-                        <a href="#">Nord America</a>
+                        <a href="{{$country['route']}}">{{$country['text']}}</a>
                     </li>
-                    <li>
-                        <a href="#">Sud America</a>
-                    </li>
-                    <li>
-                        <a href="#">Europa</a>
-                    </li>
+                    @endforeach
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <div class="container cards">
-            @foreach ($mapsCountries as $key=>$map)
+            @foreach ($homeCountries as $country)
             <div class="card">
-                <a href="#">
-                    <img src="{{$map}}" alt="{{$key}} mappa">
+                <a href="{{$country['route']}}">
+                    <img src="{{$country['path']}}" alt="{{$country['text']}} mappa">
                 </a>
             </div>
             @endforeach
