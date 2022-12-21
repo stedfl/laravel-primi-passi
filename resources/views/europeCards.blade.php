@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/style_countries.css')}}">
-    <title>Laravel - North America</title>
+    <title>Laravel - Europe</title>
 </head>
 <body>
     <main>
         <div class="container">
-            <h1>Le città più belle in North America</h1>
+            <h1>Le città più belle in Europa</h1>
             <div class="cities">
                 @foreach ($cities as $city)
                     <div class="card">
