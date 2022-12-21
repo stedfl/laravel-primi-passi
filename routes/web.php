@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Composer;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function() {
-    return view('home');
+    $mapsCountries = [
+        'North America'=>'https://www.signable.co.uk/wp-content/uploads/legal-world-north-america.webp',
+        'Europa' =>'https://www.signable.co.uk/wp-content/uploads/legal-world-europe.webp',
+        'Sud America' =>'https://www.signable.co.uk/wp-content/uploads/legal-world-south-america.webp',
+        'Australia' => 'https://www.signable.co.uk/wp-content/uploads/legal-world-australasia.webp',
+        'Asia' => 'https://www.signable.co.uk/wp-content/uploads/legal-world-asia.webp',
+        'Africa' => 'https://www.signable.co.uk/wp-content/uploads/legal-world-africa.webp'
+    ];
+    return view('home', compact('mapsCountries'));
 });
